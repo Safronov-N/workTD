@@ -1,0 +1,6 @@
+target/
+.idea/
+logs/
+bin/
+.allure/
+*.iml
