@@ -1,9 +1,8 @@
 package com.safronov.td;
 
-import com.safronov.Driver.Driver;
+import com.safronov.driver.Driver;
 import com.safronov.Logger;
 import cucumber.api.CucumberOptions;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.PickleEventWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;

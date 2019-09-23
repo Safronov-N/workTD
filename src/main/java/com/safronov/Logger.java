@@ -1,6 +1,6 @@
 package com.safronov;
 
-import com.safronov.Driver.Driver;
+import com.safronov.driver.Driver;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
