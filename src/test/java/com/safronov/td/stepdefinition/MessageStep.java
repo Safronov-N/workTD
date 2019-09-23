@@ -1,6 +1,6 @@
 package com.safronov.td.stepdefinition;
 
-import com.safronov.driver.DriverUtils;
+import com.safronov.utils.DriverUtils;
 import com.safronov.Logger;
 import com.safronov.utils.RandomText;
 import com.safronov.pages.MessagePage;

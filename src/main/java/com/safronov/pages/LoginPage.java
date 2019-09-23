@@ -13,13 +13,13 @@ public class LoginPage extends AbstractPage {
 
 
     public void setLogin() {
-        Logger.debug("Ввод логина");
+        Logger.info(String.format("Ввод логина в поле: %s", emailXpath));
         driver.setText(emailXpath, login);
-        Logger.debug("Нажатие на клавишу: Далее");
+        Logger.info(String.format("Нажатие на клавишу: %s",nextBtnXpath));
         driver.click(nextBtnXpath);
-        Logger.debug("Ввод пароля");
+        Logger.info(String.format("Ввод пароля в поле: %s",passwordXpath));
         driver.setText(passwordXpath, password);
-        Logger.debug("Нажатие на клавишу: Далее");
+        Logger.info(String.format("Нажатие на клавишу: %s",nextBtnXpath));
         driver.click(nextBtnXpath);
     }
 

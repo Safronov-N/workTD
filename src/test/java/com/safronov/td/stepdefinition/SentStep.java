@@ -1,6 +1,6 @@
 package com.safronov.td.stepdefinition;
 
-import com.safronov.driver.DriverUtils;
+import com.safronov.utils.DriverUtils;
 import com.safronov.pages.DraftPage;
 import cucumber.api.java.ru.Допустим;
 import io.qameta.allure.Step;
