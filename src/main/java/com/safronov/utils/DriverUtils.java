@@ -26,9 +26,20 @@ public class DriverUtils {
             .map(o -> o.replaceFirst("- \n", "").trim()).collect(Collectors.toList());
     }
 
+    public static void noMessageInDraft(String theme, String body){
+       boolean themeMessage = listThemeMessage().stream().anyMatch(o->o.equalsIgnoreCase(theme));
+       boolean bodyMessage = listBodyMessage().stream().anyMatch(o->o.equalsIgnoreCase(body));
+        if (!themeMessage & !bodyMessage) {
+            Logger.info(String.format("Сообщение с темой %s ожидаемо отсутствует", theme));
+        } else {
+            Logger.warn(String.format("Сообщение с темой %s присутствует", theme));
+        }
+
+    }
+
     public static void selectMessage(String messageText) {
         Driver.driver.findElements(new MessagePage().getThemeMessagesXpath()).stream()
-            .filter(e -> e.getText().equalsIgnoreCase(messageText))
+            .filter(o -> o.getText().equalsIgnoreCase(messageText))
             .findFirst().get().click();
     }
 
