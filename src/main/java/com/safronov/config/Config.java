@@ -34,5 +34,4 @@ public class Config {
         return CONFIG_PROPERTIES.getProperty("site.type");
     }
 
-
 }

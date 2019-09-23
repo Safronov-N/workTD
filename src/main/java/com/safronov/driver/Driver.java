@@ -2,14 +2,9 @@ package com.safronov.driver;
 
 import com.safronov.Logger;
 import com.safronov.config.Config;
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,16 +14,6 @@ public class Driver {
     private WebDriverWait wait;
     public static Driver driver;
     public WebDriver webDriver;
-
-    /**
-     * Путь до хром драйвера
-     */
-//    static final String PATH_TO_DRIVER = "d:\\Users\\user\\Downloads\\chromedriver.exe";
-
-    /**
-     * Сайт который надо открыть
-     */
-    static final String SITE = "https://mail.google.com/mail";
 
     private Driver() {
 
