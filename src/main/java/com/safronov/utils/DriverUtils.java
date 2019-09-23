@@ -1,6 +1,7 @@
-package com.safronov.driver;
+package com.safronov.utils;
 
 import com.safronov.Logger;
+import com.safronov.driver.Driver;
 import com.safronov.pages.EmailPage;
 import com.safronov.pages.MessagePage;
 import java.util.List;

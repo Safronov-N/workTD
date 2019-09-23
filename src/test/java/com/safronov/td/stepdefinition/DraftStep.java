@@ -1,6 +1,6 @@
 package com.safronov.td.stepdefinition;
 
-import com.safronov.driver.DriverUtils;
+import com.safronov.utils.DriverUtils;
 import com.safronov.Logger;
 import com.safronov.pages.DraftPage;
 import cucumber.api.java.ru.Допустим;
@@ -27,7 +27,7 @@ public class DraftStep {
             draftPage.checkThemeText(DriverUtils.listThemeMessage(), MessageStep.themeText);
             draftPage.checkBodyText(DriverUtils.listBodyMessage(), MessageStep.bodyMessageText);
         } catch (Exception e) {
-            Logger.debug("Письма нет в папке Черновики");
+            Logger.debug(String.format("Письма нет в папке Черновики", e));
         }
     }
 }

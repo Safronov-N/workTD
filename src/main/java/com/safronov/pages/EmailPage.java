@@ -1,6 +1,8 @@
 package com.safronov.pages;
 
 
+import com.safronov.Logger;
+
 public class EmailPage extends AbstractPage {
 
     private String draftXpath = "//a[@title='Черновики']";
@@ -17,25 +19,30 @@ public class EmailPage extends AbstractPage {
         return createNewMessageXpath;
     }
 
-    public void ProfileClick() {
+    public void profileClick() {
+        Logger.info(String.format("Нажимаем на элемент: %s",profileXpath));
         driver.click(profileXpath);
     }
 
-    public void ExitClick() {
+    public void exitClick() {
+        Logger.info(String.format("Нажимаем на элемент: %s",exitXpath));
         driver.click(exitXpath);
     }
 
     public EmailPage draftClick() {
+        Logger.info(String.format("Нажимаем на элемент: %s",draftXpath));
         driver.click(draftXpath);
         return this;
     }
 
     public EmailPage inboxClick() {
+        Logger.info(String.format("Нажимаем на элемент: %s",inboxXpath));
         driver.click(inboxXpath);
         return this;
     }
 
     public EmailPage sendMessageClick() {
+        Logger.info(String.format("Нажимаем на элемент: %s",sendMessageXpath));
         driver.click(sendMessageXpath);
         return this;
     }
