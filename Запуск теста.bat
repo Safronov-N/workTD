@@ -1,0 +1,1 @@
+mvn "-Dlogin=safrontestat" "-Dpassword=Qazxc12345" install

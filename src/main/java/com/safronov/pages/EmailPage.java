@@ -20,8 +20,13 @@ public class EmailPage extends AbstractPage {
     }
 
     public void profileClick() {
-        Logger.info(String.format("Нажимаем на элемент: %s",profileXpath));
-        driver.click(profileXpath);
+        try {
+
+            Logger.info(String.format("Нажимаем на элемент: %s", profileXpath));
+            driver.click(profileXpath);
+        }catch (Exception e){
+            Logger.warn(String.format("Не удалось выполнить клик по элементу: %s. Ошибка - %s", profileXpath,e));
+        }
     }
 
     public void exitClick() {
