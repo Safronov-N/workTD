@@ -17,7 +17,7 @@ public class Driver {
     /**
      * Путь до хром драйвера
      */
-    static final String PATH_TO_DRIVER = "C:\\Users\\Николай\\Desktop\\projectAT-master\\bin\\chromedriver.exe";
+    static final String PATH_TO_DRIVER = "d:\\Users\\user\\Downloads\\chromedriver.exe";
 
     /**
      * Сайт который надо открыть

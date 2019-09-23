@@ -5,7 +5,8 @@ import com.safronov.pages.EmailPage;
 import cucumber.api.java.ru.Допустим;
 import io.qameta.allure.Step;
 
-public class EmailStep extends AbstractSteps {
+public class EmailStep {
+
     @Step("Переходим в пункт Черновики")
     public void goToDraft() {
         Logger.info("Нажатие на кнопку Черновики");

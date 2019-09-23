@@ -4,6 +4,7 @@ package com.safronov.pages;
  * Страница по созданию письма
  */
 public class MessagePage extends AbstractPage {
+
     private String whomText = "Freeway1991@outlook.com";
 
     private String whomXpath = "//textarea[@aria-label='Кому']";
@@ -16,8 +17,6 @@ public class MessagePage extends AbstractPage {
 
     /**
      * Геттеры
-     *
-     * @return
      */
     public String getWhomText() {
         return whomText;
