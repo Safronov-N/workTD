@@ -21,13 +21,6 @@ public class DraftStep {
     @Step("Проверка на отсутствие письма в черновиках")
     @Допустим("Проверить, что письма нет в черновике")
     public void checkNotDraft() {
-        DraftPage draftPage = new DraftPage();
-        Logger.info("Проверка присутствия письма по его теме и содержанию");
-        try {
-            draftPage.checkThemeText(DriverUtils.listThemeMessage(), MessageStep.themeText);
-            draftPage.checkBodyText(DriverUtils.listBodyMessage(), MessageStep.bodyMessageText);
-        } catch (Exception e) {
-            Logger.debug(String.format("Письма нет в папке Черновики", e));
-        }
+        DriverUtils.noMessageInDraft(MessageStep.themeText,MessageStep.bodyMessageText);
     }
 }
