@@ -1,4 +1,4 @@
-package com.safronov.Utils;
+package com.safronov.utils;
 
 import java.util.Random;
 

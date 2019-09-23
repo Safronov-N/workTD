@@ -1,4 +1,4 @@
-package com.safronov.Driver;
+package com.safronov.driver;
 
 import com.safronov.Logger;
 import com.safronov.pages.EmailPage;

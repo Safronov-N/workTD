@@ -1,8 +1,8 @@
 package com.safronov.td.stepdefinition;
 
-import com.safronov.Driver.DriverUtils;
+import com.safronov.driver.DriverUtils;
 import com.safronov.Logger;
-import com.safronov.Utils.RandomText;
+import com.safronov.utils.RandomText;
 import com.safronov.pages.MessagePage;
 import cucumber.api.java.ru.Допустим;
 import io.qameta.allure.Step;

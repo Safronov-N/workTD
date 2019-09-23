@@ -1,9 +1,15 @@
-package com.safronov.Driver;
+package com.safronov.driver;
 
 import com.safronov.Logger;
+import com.safronov.config.Config;
+import java.util.Arrays;
+import java.util.Objects;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -17,7 +23,7 @@ public class Driver {
     /**
      * Путь до хром драйвера
      */
-    static final String PATH_TO_DRIVER = "d:\\Users\\user\\Downloads\\chromedriver.exe";
+//    static final String PATH_TO_DRIVER = "d:\\Users\\user\\Downloads\\chromedriver.exe";
 
     /**
      * Сайт который надо открыть
@@ -25,15 +31,16 @@ public class Driver {
     static final String SITE = "https://mail.google.com/mail";
 
     private Driver() {
+
         webDriver = new ChromeDriver(getConfiguration());
         wait = new WebDriverWait(webDriver, 5, 1222);
-        webDriver.get(SITE);
+        webDriver.get(Config.getUrl());
         webDriver.manage().window().maximize();
     }
 
 
     private ChromeOptions getConfiguration() {
-        System.setProperty("webdriver.chrome.driver", PATH_TO_DRIVER);
+        System.setProperty("webdriver.chrome.driver", Config.getDriverPath());
         ChromeOptions chromeOptions = new ChromeOptions();
         return chromeOptions;
     }
