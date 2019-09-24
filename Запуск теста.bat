@@ -1,1 +1,1 @@
-mvn "-Dlogin=safrontestat" "-Dpassword=Qazxc12345" install
+mvn "-Dlogin=safrontestat" "-Dpassword=Qazxc12345" "-DlogPath:C:/" install
